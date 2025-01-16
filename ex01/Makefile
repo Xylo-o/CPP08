@@ -3,6 +3,7 @@ CC := c++
 CCFLAGS := -Werror -Wextra -Wall -std=c++98
 
 SRC := main.cpp \
+		Span.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
