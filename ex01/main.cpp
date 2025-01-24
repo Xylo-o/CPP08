@@ -6,7 +6,7 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:17 by adprzyby          #+#    #+#             */
-/*   Updated: 2025/01/16 20:49:44 by adprzyby         ###   ########.fr       */
+/*   Updated: 2025/01/24 14:19:07 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,17 @@ int main (void) {
 		std::cout << BLUE << "The longest span is: " << NC << sp.longestSpan() << std::endl;
 	} catch (const std::exception &e) {
 		std::cerr << RED << "Exception caught: " << NC << e.what() << std::endl;
-	}	
+	}
 	std::cout << YELLOW << "===============SECOND TEST===============" << NC << std::endl;
+	try {
+		Span sp = Span(5);
+		sp.addNumbers({4, 2, -2, 10, 7});
+		std::cout << BLUE << "The shortest span is: " << NC << sp.shortestSpan() << std::endl;
+		std::cout << BLUE << "The longest span is: " << NC << sp.longestSpan() << std::endl;
+	} catch (const std::exception &e) {
+		std::cerr << RED << "Exception caught: " << NC << e.what() << std::endl;
+	}
+	std::cout << YELLOW << "===============THIRD TEST===============" << NC << std::endl;
 	try {
 		Span sp = Span(3);
 		sp.addNumber(6);
@@ -40,7 +49,7 @@ int main (void) {
 	} catch (const std::exception &e) {
 		std::cerr << RED << "Exception caught: " << NC << e.what() << std::endl;
 	}
-	std::cout << YELLOW << "===============THIRD TEST===============" << NC << std::endl;
+	std::cout << YELLOW << "===============FORTH TEST===============" << NC << std::endl;
 	try {
 		Span sp = Span(5);
 		sp.addNumber(6);

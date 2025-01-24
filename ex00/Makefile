@@ -9,7 +9,7 @@ OBJ := $(SRC:.cpp=.o)
 all: $(NAME)
 
 %.o: %.cpp compile_message
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CCFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
 	@$(CC) $(CCFLAGS) $^ -o $@

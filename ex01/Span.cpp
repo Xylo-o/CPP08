@@ -6,7 +6,7 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 08:07:46 by adprzyby          #+#    #+#             */
-/*   Updated: 2025/01/16 20:43:55 by adprzyby         ###   ########.fr       */
+/*   Updated: 2025/01/24 14:17:00 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,16 @@ void Span::addNumber(int value) {
 		throw std::out_of_range("Span is full!");
 	}
 	else {
+		numbers.push_back(value);
+		std::cout << GREEN << "Item added successfully: " << NC << value << std::endl;
+	}
+}
+
+void Span::addNumbers(std::initializer_list<int> values) {
+	for (int value : values) {
+		if (numbers.size() >= size) {
+			throw std::out_of_range("Span is full!");
+		}
 		numbers.push_back(value);
 		std::cout << GREEN << "Item added successfully: " << NC << value << std::endl;
 	}
